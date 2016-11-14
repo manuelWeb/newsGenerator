@@ -10,7 +10,11 @@ function getFiles (dir, files_){
   return files_;
 }
 var aryimg = getFiles('images')
-console.log('aryimg[0]' + aryimg[0])
+console.log(aryimg)
+function slice(value){
+    return /^s1.+\.(jpg|gif|png)$/.test(value);
+}
+console.log(aryimg.filter(slice))
 
 
 // console.log('typeof aryimg: '+typeof aryimg)
