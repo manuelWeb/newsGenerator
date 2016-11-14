@@ -4,12 +4,10 @@ function getFiles (dir, files_){
   files_ = files_ || [];
   var files = fs.readdirSync(dir);
   for (var i in files){
-    var name = dir + '/' + files[i];
-    if (fs.statSync(name).isDirectory()){
-      getFiles(name, files_);
-    } else {
-      files_.push(name);
-    }
+    // var name = dir + '/' + files[i];
+    // fs.statSync(name).isDirectory() ? getFiles(name, files_) : files_.push(name);
+    var name = files[i];
+    files_.push(name)
   }
   return files_;
 }
