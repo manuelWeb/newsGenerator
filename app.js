@@ -12,14 +12,6 @@ function getFiles (dir, files_){
 var aryimg = getFiles('images')
 console.log(aryimg)
 
-var s = '1';
-function slice(ary){
-  // return /^s1.+\.(jpg|gif|png)$/.test(ary);
-  var dynReg = new RegExp('^s'+s+'.+\.(jpg|gif|png)$','gi')
-  return dynReg.test(ary);
-}
-console.log(aryimg.filter(slice))
-
 function sortSlice(imgarray, slice){
   var re = new RegExp("s" + slice + ".+\.(jpg|gif|png)","gi"),
       result = [];
@@ -28,7 +20,7 @@ function sortSlice(imgarray, slice){
   }
   return result;
 }
-// console.log(sortSlice(aryimg,'1'));
+console.log(sortSlice(aryimg,'1'));
 
 // écrire dans un fichier
 function writeTable (imglist){
