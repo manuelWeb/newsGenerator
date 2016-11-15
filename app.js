@@ -20,16 +20,6 @@ function slice(ary){
 }
 console.log(aryimg.filter(slice))
 
-function sortSlice(imgarray, slice){
-  var re = new RegExp("s" + slice + ".+\.(jpg|gif|png)","gi"),
-      result = [];
-  for (var i in imgarray){
-    result.push(imgarray[i].match(re))
-  }
-  return result;
-}
-// console.log(sortSlice(aryimg,'1'));
-
 // écrire dans un fichier
 function writeTable (imglist){
   fs.writeFile("var.slim", imglist, function(err){
