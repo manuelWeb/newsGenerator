@@ -12,8 +12,11 @@ function getFiles (dir, files_){
 var aryimg = getFiles('images')
 console.log(aryimg)
 
-function slice(value){
-  return /^s1.+\.(jpg|gif|png)$/.test(value);
+var s = '1';
+function slice(ary){
+  // return /^s1.+\.(jpg|gif|png)$/.test(ary);
+  var dynReg = new RegExp('^s'+s+'.+\.(jpg|gif|png)$','gi')
+  return dynReg.test(ary);
 }
 console.log(aryimg.filter(slice))
 
