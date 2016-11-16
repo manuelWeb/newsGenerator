@@ -14,30 +14,20 @@ console.log(aryimg)
 
 var s = '1';
 function slice (ary){
-  // return /^s1.+\.(jpg|gif|png)$/.test(ary);
   var dynReg = new RegExp('^s'+s+'.+\.(jpg|gif|png)$','gi')
   return dynReg.test(ary);
 }
 // console.log(aryimg.filter(slice))
 
 function cptSlice (ary) {
-  var tabs = [];
+  var tabs = [], result = [];
   for (var i in ary) {
     tabs.push(ary[i].slice(1,2))
   }
-  var result = [];
   tabs.filter(function(item, pos) {
     tabs.indexOf(item) == pos ? result.push(item) : item++;
   })
-  console.log(result);
+  return result;
 }
-cptSlice(aryimg)
-
-// écrire dans un fichier
-function writeTable (imglist){
-  fs.writeFile("var.slim", imglist, function(err){
-    if(err) return console.log(err);
-    console.log('the var.slim was write')
-  })
-}
-
+var slNiv1 = cptSlice(aryimg);
+console.log(slNiv1)
