@@ -28,8 +28,8 @@ function cptSlice (ary) {
 // affiche s = numero slice
 for (var s in slNiv1) {
   var s = ++s; // initialise s à 1 non à 0
-  console.log(s); // s = slice unique
+  console.log('tr' + '\n' + '  td')// console.log(s); // s = slice unique
   // console.log(aryimg.filter(slice)); // = images par slice
   var imgOnSce = function () { return aryimg.filter(slice); }
-  console.log(imgOnSce())
+  console.log('tab'+s+'  ' +imgOnSce())
 }
