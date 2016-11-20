@@ -13,8 +13,7 @@ function getFiles (dir, files_){
 }
 // fct pour filtrer slices s=1 sort [ 's1c1.jpg', 's1c2.jpg', 's1c3.jpg' ]
 function slice (ary){
-  // var dynReg = new RegExp('^s'+s+'.+\.(jpg|gif|png)$','gi');
-  var dynReg = new RegExp('^s'+s+'..(_l|)\.(jpg|gif|png)$','gi');
+  var dynReg = new RegExp('^s'+s+'.+\.(jpg|gif|png)$','gi');
   return dynReg.test(ary);
 }
 // cptSlice retourne le nombre totale de slices sncn=niv1
@@ -27,23 +26,38 @@ function cptSlice (ary) {
   return result;
 }
 // affiche s = numero slice
+var idt = function(nb){return ' '.repeat(nb)},
+tab0 = 'table border="0" cellpadding="0" cellspacing="0"\n',
+a = {
+  href: 'a href=', targ: 'target="_blank"',
+  add: function(item){return this.href + '($' + item + ') ' + this.targ + '\n'}
+},
+img = {
+  img: 'img ',
+  src: 'src=$imgSrc',
+  bd0: 'border="0"',
+  alt: 'alt=',
+  reg : /^([a9-z0].+)?\./, // find all before .
+  add: function(item){return this.img + this.src + '+"' + item + '" ' + img.bd0 + idt(1) + img.alt + item.match(this.reg)[1] }
+}
 for (var s in slNiv1) {
   var s = ++s; // initialise s à 1 non à 0
-  console.log('tr')// console.log(s); // s = slice unique
+  console.log('tr');// console.log(s); // s = slice unique
   // console.log(aryimg.filter(slice)); // = images par slice
   var tabs1 = [];
-  var imgOnSce = function () {
-    return aryimg.filter(slice);
-  }
+  var imgOnSce = function () { return aryimg.filter(slice); }
   tabs1.push(aryimg.filter(slice))
-  // console.log(tabs1[0]);
   for (i in imgOnSce()){
-    // console.log('  td' + '\n    ' +imgOnSce()[i].match(/_l/)!='' ? 'a href'+'\n'+'img src=' +imgOnSce()[i] : 'img src=' +imgOnSce()[i])
     var item = imgOnSce()[i];
-    if (item.match(/_l/) == null){
-      console.log('  td' + '\n    ' + item)
-    }else{
-      console.log('  td' + '\n    ' + 'a href=($'+item.slice(0,4)+')' +'\n      ' + item)
+    if (!item.match(/_l/g) && item.length == '8'){
+      // console.log(idt(2) + 'td\n' + idt(4) + item)
+      console.log(idt(2) + 'td\n' + idt(4) + img.add(item))
+    }else if (item.match(/_l/g) && item.length == '10'){
+      console.log(idt(2) + 'td\n' + idt(4) + a.add(item.slice(0,4)) + idt(6) + img.add(item))
+    }else if (!item.match(/_l/g) && item.length == '12'){
+      console.log(idt(2) + 'td\n' + idt(4) + 'table\n' + idt(6) + 'tr\n'+ idt(8) + 'td\n' + idt(10) + item)
+    }else if (item.match(/_l/g) && item.length == '14'){
+      console.log(idt(2) + 'td\n' + idt(4) + 'table\n' + idt(6) + 'tr\n'+ idt(8) + 'td\n' + idt(10) + a.add(item.slice(0,8)) + idt(12) + item)
     }
   }
 }
