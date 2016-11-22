@@ -1,6 +1,7 @@
 var fs     = require('fs'),
     aryimg = getFiles('images'),
     slNiv1 = cptSlice(aryimg);
+console.log(cptSlice(aryimg));
 // retourne array des fichiers présents dans images folder
 function getFiles (dir, files_){
   files_ = files_ || [];
@@ -47,6 +48,7 @@ for (var s in slNiv1) {
   var tabs1 = [];
   var imgOnSce = function () { return aryimg.filter(slice); }
   tabs1.push(aryimg.filter(slice))
+console.log(aryimg.filter(slice));
   for (i in imgOnSce()){
     var item = imgOnSce()[i];
     if (!item.match(/_l/g) && item.length == '8'){
@@ -61,3 +63,4 @@ for (var s in slNiv1) {
     }
   }
 }
+
