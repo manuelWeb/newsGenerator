@@ -27,6 +27,9 @@ var  src = 'src/';
 // browser-sync task !attention il faut un index.html obligatoire
 gulp.task('browserSync',function () {
   browserSync({
+    // browser: 'google chrome',
+    // browser: [ 'google chrome','firefox' ],
+    browser: 'firefox',
     server: {
       baseDir: 'render/FR'
     }
