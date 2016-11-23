@@ -1,0 +1,122 @@
+== Slim::Template.new('./src/FR/var/var.slim').render
+-$imgSrc      = "images/"
+/ -$imgSrc      = "http://www.webdesignord.fr/domoti/TL/images/"
+-white       = "#FFFFFF"
+-varbgcolor  = white
+-$vartxtcolor = "#550C06"
+doctype transitional
+html xmlns="http://www.w3.org/1999/xhtml"
+  head
+    title Temps L : livraison express
+    link rel="stylesheet" href="css/stylesAdd.css"/
+    / link rel="stylesheet" href="scss/stylesAdd.scss"/
+    meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+    css:
+      img{display: block;}
+      td img{display: block;}
+
+  body bgcolor="#ffffff" style="margin:0;"
+    table width="100%" border="0" align="left" cellpadding="0" cellspacing="0"
+      tr
+        td
+          table width="640" border="0" align="center" cellpadding="0" cellspacing="0"
+            /! header
+            == Slim::Template.new('./src/FR/partial/_header.slim').render
+            
+            tr
+              td
+                table border="0" cellpadding="0" cellspacing="0" width="620"
+                  tr
+                    td valign="top" width="10"
+                      img src=($imgSrc)+"left_shadow.png" alt="" width="10" height="1065" border="0"
+                    td valign="top"
+                      table border="0" cellpadding="0" cellspacing="0" width="620"
+                        tr
+                          td
+                            table border="0" cellpadding="0" cellspacing="0" width="620"
+                              tr
+                                td
+                                  a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[0]+$campaign) target="_blank"
+                                    img name="slice1_1" src=($imgSrc)+"slice1_1.png" width="238" height="68" border="0" style="font-family:Georgia, Times, serif;font-size:46px;color:#DD134B; " alt="Temps L"
+                                td
+                                  a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[0]+$campaign) target="_blank"
+                                    img name="slice1_2" src=($imgSrc)+"slice1_2.png" width="228" height="68" border="0" alt=""
+                                td
+                                  a href==($id+$srcmedium[0]+$content[0]+$contTab[1]+$campaign) target="_blank"
+                                    img name="slice1_3" src=($imgSrc)+"slice1_3.png" width="154" height="68" border="0" style="font-family:Arial, Helvetica, sans-serif;font-size:21px;color:#333333;" alt="MON COMPTE"
+                        tr
+                          td
+                            table border="0" cellpadding="0" cellspacing="0" width="620"
+                              tr
+                                td
+                                  a href==($univers[0]+$srcmedium[0]+$content[0]+$contTab[2]+$campaign) target="_blank"
+                                    img name="slice2_1" src=($imgSrc)+"slice2_1.png" width="64" height="41" border="0" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #B31F1F;text-align: center;" alt==($altunivers[0])
+                                td
+                                  a href==($univers[1]+$srcmedium[0]+$content[0]+$contTab[3]+$campaign) target="_blank"
+                                    img name="slice2_2" src=($imgSrc)+"slice2_2.png" width="142" height="41" border="0" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #B31F1F;text-align: center;" alt==($altunivers[1])
+                                td
+                                  a href==($univers[2]+$srcmedium[0]+$content[0]+$contTab[4]+$campaign) target="_blank"
+                                    img name="slice2_3" src=($imgSrc)+"slice2_3.png" width="96" height="41" border="0" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #B31F1F;text-align: center;" alt==($altunivers[2])
+                                td
+                                  a href==($univers[3]+$srcmedium[0]+$content[0]+$contTab[5]+$campaign) target="_blank"
+                                    img name="slice2_4" src=($imgSrc)+"slice2_4.png" width="102" height="41" border="0" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #B31F1F;text-align: center;" alt==($altunivers[3])
+                                td
+                                  a href==($univers[4]+$srcmedium[0]+$content[0]+$contTab[6]+$campaign) target="_blank"
+                                    img name="slice2_5" src=($imgSrc)+"slice2_5.png" width="52" height="41" border="0" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #B31F1F;text-align: center;" alt==($altunivers[4])
+                                td
+                                  a href==($univers[5]+$srcmedium[0]+$content[0]+$contTab[7]+$campaign) target="_blank"
+                                    img name="slice2_6" src=($imgSrc)+"slice2_6.png" width="164" height="41" border="0" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #B31F1F;text-align: center;" alt==($altunivers[5])
+                        tr
+                          td
+                            a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[8]+$campaign) target="_blank"
+                              img name="slice3" src=($imgSrc)+"slice3.png" width="620" height="49" border="0" style="font-family:'Trebuchet MS', Arial, Helvetica, sans-serif;font-size:36px;color:#0096D6;text-align:left;font-style: italic;" alt==($altcontent[:slice3])
+                        tr
+                          td
+                            a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[8]+$campaign) target="_blank"
+                              img name="slice4" src=($imgSrc)+"slice4.png" width="620" height="129" border="0" style="font-family:Arial, Helvetica, sans-serif;font-weight:bold;font-size:80px;color:#FF3300;font-weight:bold;" alt==($altcontent[:slice4])
+                        tr
+                          td
+                            a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[8]+$campaign) target="_blank"
+                              img name="slice5" src=($imgSrc)+"slice5.png" width="620" height="161" border="0" style="font-family:Arial, Helvetica, sans-serif;font-weight:bold;font-size:80px;color:#0096D6;font-weight:bold;" alt==($altcontent[:slice5])
+                        tr
+                          td
+                            a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[8]+$campaign) target="_blank"
+                              img name="slice6" src=($imgSrc)+"slice6.png" width="620" height="171" border="0" style="font-family:Arial, Helvetica, sans-serif;font-weight:bold;font-size:80px;color:#FF3300;font-weight:bold;" alt==($altcontent[:slice6])
+                        tr
+                          td
+                            a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[8]+$campaign) target="_blank"
+                              img name="slice7" src=($imgSrc)+"slice7.png" width="620" height="32" border="0" style="font-family:Arial, Helvetica, sans-serif;font-weight:bold;font-size:28px;color:#111111;font-weight:bold;" alt==($altcontent[:slice7])
+                        tr
+                          td
+                            table border="0" cellpadding="0" cellspacing="0" width="620"
+                              tr
+                                td
+                                  table border="0" cellpadding="0" cellspacing="0" width="347"
+                                    tr
+                                      td
+                                        a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[9]+$campaign) target="_blank"
+                                          img name="slice8_1-1" src=($imgSrc)+"slice8_1-1.png" width="347" height="80" border="0" alt=""
+                                    tr
+                                      td
+                                        a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[9]+$campaign) target="_blank"
+                                          img name="slice8_1-2" src=($imgSrc)+"slice8_1-2.gif" width="347" height="69" border="0" alt=""
+                                    tr
+                                      td
+                                        a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[9]+$campaign) target="_blank"
+                                          img name="slice8_1-3" src=($imgSrc)+"slice8_1-3.png" width="347" height="62" border="0" alt=""
+                                td
+                                  a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[10]+$campaign) target="_blank"
+                                    img name="slice8_2" src=($imgSrc)+"slice8_2.png" width="273" height="211" border="0" style="font-family:Arial, Helvetica, sans-serif;font-weight:bold;font-size:28px;color:#0096D6;font-weight:bold;" alt==($altcontent[:slice8_2])
+                        tr
+                          td
+                            a href==($url+$index+$srcmedium[0]+$content[0]+$contTab[11]+$campaign) target="_blank"
+                              img name="slice9" src=($imgSrc)+"slice9.png" width="620" height="108" border="0" style="font-family:Arial, Helvetica, sans-serif;font-weight:bold;font-size:28px;color:#0096D6;font-weight:bold;text-align:center;" alt==($altcontent[:slice9])
+
+                        / FOOTER
+                        == Slim::Template.new('./src/FR/partial/_footer.slim').render
+
+                    td valign="top" width="10"
+                      img src=($imgSrc)+"right_shadow.png" alt="" width="10" height="1065" border="0"
+
+      /!  legal notice
+      == Slim::Template.new('./src/FR/partial/_legal.slim').render

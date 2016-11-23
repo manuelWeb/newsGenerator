@@ -1,0 +1,28 @@
+/ txt - alt
+-$dateOffre = "14 au 17 mars 2016"
+-$title       ="Temps L : livraison express"
+-$altunivers = ["CUISINE","ENTRETIEN ET RANGEMENT","SANTE ET BEAUTE","MAISON ET DECO","LOISIRS","VETEMENTS ET ACCESSOIRES"]
+-$altcontent = {slice3:"POUR VOUS",slice4:"LIVRAISON",slice5:"EXPRESS",slice6:"OFFERTE",slice7:"Du #{$dateOffre}",slice8_2:"Votre commande livrée en 24h en relais colis",slice9:"J’EN PROFITE TOUT DE SUITE !"}
+/ content link
+-$url = "http://www.tempsl.fr/fr/"
+-$index = "index.aspx"
+-$srcmedium = ["?utm_source=NL&utm_medium=email","&utm_source=NL&utm_medium=email"]
+-$campaign = "&utm_campaign=0316_liv_express"
+-$content = ["&utm_content=","url","garantie","livraison","paiement","contact","desabo"]
+-$contTab = ["logo","compte","cuisine","entretien","sante","mzns","loisirs","vetmts","news","camion","relais","bouton"]
+/ footer
+-$haconfiance=["achat_confiance/","garanties.aspx","informations-livraison.aspx","paiement-securise.aspx"]
+/ mentions
+-$contactdesabo=["tempsl_et_vous/contact.aspx?val=A","animation/DesinscriptionNewsletter.aspx"]
+/ content link
+- $id = "http://www.tempsl.fr/fr/compte_client/compte-perso.aspx"
+- $univers = ["http://www.tempsl.fr/fr/cuisine/Univers.html","http://www.tempsl.fr/fr/entretien-rangement/Univers.html","http://www.tempsl.fr/fr/sante-beaute/Univers.html","http://www.tempsl.fr/fr/maison-deco/Univers.html","http://www.tempsl.fr/fr/loisirs/Univers.html","http://www.tempsl.fr/fr/vetements-accessoires/Univers.html"]
+/ footer
+-$furl       =$url+$index+$srcmedium[0]+$content[0]+$content[1]+$campaign
+-$fgaranties =$url+$haconfiance[0]+$haconfiance[1]+$srcmedium[0]+$content[0]+$content[2]+$campaign
+-$flivraison =$url+$haconfiance[0]+$haconfiance[2]+$srcmedium[0]+$content[0]+$content[3]+$campaign
+-$fpaiement  =$url+$haconfiance[0]+$haconfiance[3]+$srcmedium[0]+$content[0]+$content[4]+$campaign
+
+/ mentions
+-$lcontact =$url+$contactdesabo[0]+$srcmedium[1]+$content[0]+$content[5]+$campaign
+-$ldesabo  =$url+$contactdesabo[1]+$srcmedium[0]+$content[0]+$content[6]+$campaign
