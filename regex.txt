@@ -1,0 +1,5 @@
+// trouver toutes les occurences alpha numérique d'une longeur de 12
+M/"[a-z0-9]{12}\.(png|jpg|gif)"/ig
+
+// longeur 4
+M/"[a-z0-9]{4}\.(png|jpg|gif)"/ig
